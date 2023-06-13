@@ -19,22 +19,27 @@ const val RAINBOW_COLOR = "RAINBOW_COLOR"
 const val DEFAULT_COLOR = "#FFFFFF" // White
 
 class MainActivity : AppCompatActivity() {
+
+    private val startForResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+        { activityResult ->
+            val data = activityResult.data
+            val backgroundColor = data?.getIntExtra(
+                RAINBOW_COLOR, Color.parseColor(DEFAULT_COLOR))
+                ?: Color.parseColor(DEFAULT_COLOR) // Elvis Operator
+            val colorName = data?.getStringExtra(RAINBOW_COLOR_NAME) ?: ""
+            val colorMessage = getString(R.string.color_chosen_message, colorName)
+            val rainbowColor = findViewById<TextView>(R.id.rainbow_color)
+            rainbowColor.setBackgroundColor(ContextCompat.getColor(this, backgroundColor))
+            rainbowColor.text = colorMessage
+            rainbowColor.isVisible = true
+        }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        private val startForResult =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult())
-            { activityResult ->
-                val data = activityResult.data
-                val backgroundColor = data?.getIntExtra(
-                    RAINBOW_COLOR, Color.parseColor(DEFAULT_COLOR))
-                    ?: Color.parseColor(DEFAULT_COLOR) // Elvis Operator
-                val colorName = data?.getStringExtra(RAINBOW_COLOR_NAME) ?: ""
-                val colorMessage = getString(R.string.color_chosen_message, colorName)
-                val rainbowColor = findViewById<TextView>(R.id.rainbow_color)
-                rainbowColor.setBackgroundColor(ContextCompat.getColor(this, backgroundColor))
-                rainbowColor.text = colorMessage
-                rainbowColor.isVisible = true
+        findViewById<Button>(R.id.submit_button)
+            .setOnClickListener {
+                startForResult.launch(Intent(this, RandomColorPickerActivity::class.java))
             }
     }
 }
