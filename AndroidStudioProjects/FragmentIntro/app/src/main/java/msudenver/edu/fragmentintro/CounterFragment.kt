@@ -5,16 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+var counter = 0 // global variable
 
 /**
- * A simple [Fragment] subclass.
- * Use the [CounterFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * A simple [Fragment] subclass. Use the [CounterFragment.newInstance]
+ * factory method to create an instance of this fragment.
  */
 class CounterFragment : Fragment() {
     // TODO: Rename and change types of parameters
@@ -37,10 +39,28 @@ class CounterFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_counter, container, false)
     }
 
+    override fun onViewCreated(
+        view: View, savedInstanceState:
+        Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val counterValue =
+            view.findViewById<TextView>(R.id.counter_value)
+        view.findViewById<Button>(R.id.plus).setOnClickListener {
+            counter++
+            counterValue.text = counter.toString()
+        }
+        view.findViewById<Button>(R.id.minus).setOnClickListener {
+            if (counter > 0) {
+                counter--
+                counterValue.text = counter.toString()
+            }
+        }
+    }
+
     companion object {
         /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
+         * Use this factory method to create a new instance of this fragment using
+         * the provided parameters.
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
