@@ -1,5 +1,6 @@
 package msudenver.edu.fragmentintro
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,13 +13,12 @@ import android.widget.TextView
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-var counter = 0 // global variable
 
 /**
- * A simple [Fragment] subclass. Use the [CounterFragment.newInstance]
+ * A simple [Fragment] subclass. Use the [ColorFragment.newInstance]
  * factory method to create an instance of this fragment.
  */
-class CounterFragment : Fragment() {
+class ColorFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,26 +36,26 @@ class CounterFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_counter, container, false)
+        return inflater.inflate(R.layout.fragment_color, container, false)
     }
 
-    override fun onViewCreated(
-        view: View, savedInstanceState:
-        Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val counterValue =
-            view.findViewById<TextView>(R.id.counter_value)
-        view.findViewById<Button>(R.id.plus).setOnClickListener {
-            counter++
-            counterValue.text = counter.toString()
+        val redButton = view.findViewById<Button>(R.id.red_button)
+        val greenButton = view.findViewById<Button>(R.id.green_button)
+        val blueButton = view.findViewById<Button>(R.id.blue_button)
+        val helloWorldTextView = view.findViewById<TextView>(R.id.hello_world)
+        redButton.setOnClickListener {
+            helloWorldTextView.setTextColor(Color.RED)
         }
-        view.findViewById<Button>(R.id.minus).setOnClickListener {
-            if (counter > 0) {
-                counter--
-                counterValue.text = counter.toString()
-            }
+        greenButton.setOnClickListener {
+            helloWorldTextView.setTextColor(Color.GREEN)
+        }
+        blueButton.setOnClickListener {
+            helloWorldTextView.setTextColor(Color.BLUE)
         }
     }
+
 
     companion object {
         /**
@@ -64,12 +64,12 @@ class CounterFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment CounterFragment.
+         * @return A new instance of fragment ColorFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            CounterFragment().apply {
+            ColorFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="StarSignTextView" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:padding">18dp</item>
+    </style>
+
+    <style name="StarSignTextViewHeader" parent="Base.TextAppearance.AppCompat.Display1">
+        <item name="android:padding">18dp</item>
+    </style>
+
+    <style name="Theme.DualPaneLayout" parent="Base.Theme.DualPaneLayout" />
+</resources>
