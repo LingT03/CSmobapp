@@ -9,10 +9,39 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/header_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="356dp"
+        android:layout_height="71dp"
+        android:hint="@string/Email"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="73dp" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="356dp"
+        android:layout_height="71dp"
+        android:hint="@string/Password"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="392dp"
+        android:text="@string/create_button"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
