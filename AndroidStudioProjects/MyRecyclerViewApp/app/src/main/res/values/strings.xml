@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Recycler View App</string>
+    <string name="hello_label">Hello world!</string>
+</resources>
