@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Lab03</string>
+
+    // Planets
+    <string name="Mercury">Mercury</string>
+    <string name="Venus">Venus</string>
+    <string name="Earth">Earth</string>
+    <string name="Mars">Mars</string>
+    <string name="Jupiter">Jupiter</string>
+    <string name="Saturn">Saturn</string>
+    <string name="Uranus">Uranus</string>
+    <string name="Neptune">Neptune</string>
+
+    // Questions
+
+    <string name="question1">What is the largest planet in our solar system?</string>
+    <string name="question2">Which Planet has the most moons?</string>
+    <string name="question3">Which Planet Spins on its side?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

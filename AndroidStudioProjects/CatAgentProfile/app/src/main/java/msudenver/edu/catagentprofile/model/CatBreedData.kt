@@ -1,4 +1,6 @@
 package msudenver.edu.catagentprofile.model
 
-class CatBreedData {
-}
+class CatBreedData(
+    val name: String,
+    val temperament: String
+)
