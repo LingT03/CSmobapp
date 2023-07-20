@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 
@@ -35,7 +36,11 @@ class SplitFragmentTwo : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val totalsViewModel =
             ViewModelProvider(requireActivity()).get(TotalsViewModel::class.java)
-        updateText(totalsViewModel.total)
+        totalsViewModel.total.observe(viewLifecycleOwner, { updateText(it) })
+
+        view.findViewById<Button>(R.id.fragment_split_one_button).setOnClickListener {
+            totalsViewModel.increaseTotal()
+        }
     }
 
     private fun updateText(total: Int) {
