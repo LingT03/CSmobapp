@@ -4,6 +4,7 @@ import android.content.ContentResolver
 import android.content.ContentValues
 import android.content.Context
 import android.net.Uri
+import android.os.Environment
 import org.apache.commons.io.IOUtils
 import java.io.File
 import java.util.concurrent.Executor
@@ -13,8 +14,9 @@ class ProviderFileManager(
     private val fileHelper: FileHelper,
     private val contentResolver: ContentResolver,
     private val executor: Executor,
-    private val mediaContentHelper: MediaContentHelper
+    private val mediaContentHelper: ContentHelper
 ) {
+
     fun generatePhotoUri(time: Long): FileInfo {
         val name = "img_$time.jpg"
         val file = File(
@@ -65,11 +67,7 @@ class ProviderFileManager(
         }
     }
 
-    private fun insertToStore(
-        fileInfo: FileInfo,
-        contentUri: Uri,
-        contentValues: ContentValues
-    ) {
+    private fun insertToStore(fileInfo: FileInfo, contentUri: Uri, contentValues: ContentValues) {
         executor.execute {
             val insertedUri = contentResolver.insert(contentUri, contentValues)
             insertedUri?.let {
@@ -79,5 +77,4 @@ class ProviderFileManager(
             }
         }
     }
-}
 }

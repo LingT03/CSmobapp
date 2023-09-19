@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/instruction_fragment"
+        android:name="edu.msudenver.cs3013.project03.InstructionFragment"
+        android:label="Instructions"
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instruction_fragment_to_breakfastOptionsFragment"
+            app:destination="@id/breakfastOptionsFragment" />
+        <action
+            android:id="@+id/action_instruction_fragment_to_dinnerOptionsFragment"
+            app:destination="@id/dinnerOptionsFragment" />
+        <action
+            android:id="@+id/action_instruction_fragment_to_lunchOptionsFragment"
+            app:destination="@id/lunchOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="edu.msudenver.cs3013.project03.WelcomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_welcome"
+        app:popUpTo="@id/welcomeFragment">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instruction_fragment"
+            app:destination="@id/instruction_fragment"
+            app:popUpTo="@id/welcomeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/breakfastOptionsFragment"
+        android:name="edu.msudenver.cs3013.project03.BreakfastOptionsFragment"
+        android:label="Breakfast"
+        tools:layout="@layout/fragment_breakfast_options" >
+
+        <action
+            android:id="@+id/action_breakfastOptionsFragment_to_breakfastIngredientsFragment"
+            app:destination="@id/breakfastIngredientsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dinnerOptionsFragment"
+        android:name="edu.msudenver.cs3013.project03.DinnerOptionsFragment"
+        android:label="Dinner"
+        tools:layout="@layout/fragment_dinner_options" >
+        <action
+            android:id="@+id/action_dinnerOptionsFragment_to_dinnerIngredientsFragment"
+            app:destination="@id/dinnerIngredientsFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/pickNewMeal"
+        android:name="edu.msudenver.cs3013.project03.PickNewMeal"
+        android:label="New Meal"
+        tools:layout="@layout/activity_pick_new_meal" />
+    <fragment
+        android:id="@+id/lunchOptionsFragment"
+        android:name="edu.msudenver.cs3013.project03.LunchOptionsFragment"
+        android:label="Lunch" >
+        <action
+            android:id="@+id/action_lunchOptionsFragment_to_lunchIngredientsFragment"
+            app:destination="@id/lunchIngredientsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breakfastIngredientsFragment"
+        android:name="edu.msudenver.cs3013.project03.BreakfastIngredientsFragment"
+        android:label="Breakfast Ingredients" >
+        <action
+            android:id="@+id/action_breakfastIngredientsFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lunchIngredientsFragment"
+        android:name="edu.msudenver.cs3013.project03.LunchIngredientsFragment"
+        android:label="Lunch Ingredients"
+        tools:layout="@layout/fragment_lunch_ingredients" >
+        <action
+            android:id="@+id/action_lunchIngredientsFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dinnerIngredientsFragment"
+        android:name="edu.msudenver.cs3013.project03.DinnerIngredientsFragment"
+        android:label="Dinner Ingredients"
+        tools:layout="@layout/fragment_dinner_ingredients" >
+        <action
+            android:id="@+id/action_dinnerIngredientsFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickNewMealFragment"
+        android:name="edu.msudenver.cs3013.project03.PickNewMealFragment"
+        android:label="PickNewMealFragment" />
+    <activity
+        android:id="@+id/mealBrowserActivity"
+        android:name="edu.msudenver.cs3013.project03.MealBrowserActivity"
+        android:label="MealBrowserActivity" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="edu.msudenver.cs3013.project03.MapsFragment"
+        android:label="Grocery Locator"
+        tools:layout="@layout/activity_maps" />
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="edu.msudenver.cs3013.project03.StoreFragment"
+        android:label="StoreFragment" />
+    <activity
+        android:id="@+id/favoritesActivity"
+        android:name="edu.msudenver.cs3013.project03.MealDetailsActivity"
+        android:label="activity_favorites"
+        tools:layout="@layout/activity_meal_details" />
+    <activity
+        android:id="@+id/photoActivity"
+        android:name="edu.msudenver.cs3013.project03.PhotoActivity"
+        android:label="activity_photo"
+        tools:layout="@layout/activity_photo" />
+
+</navigation>

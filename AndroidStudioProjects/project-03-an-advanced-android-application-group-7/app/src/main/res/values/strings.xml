@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Project 03</string>
+    <string name="thank_you">Thank you for using our app! \n We Will Get Back To You Shortly!</string>
+    <string name="plan_instruction">Welcome %s! Please pick a meal to plan</string>
+    <string name="meal_instruction">%s, please pick a dish for your meal</string>
+    <string name="lunch_salad">Salad</string>
+    <string name="lunch_sandwhich">Sandwich</string>
+    <string name="dinner_spaghetti">Spaghetti</string>
+    <string name="dinner_chicken">Chicken</string>
+    <string name="dinner_pho">Pho</string>
+    <string name="breakfast_cereal">Cereal</string>
+    <string name="breakfast_oatmeal">Oatmeal</string>
+    <string name="welcome_message">Welcome to EesyEets!</string>
+    <string name="Description_message">Ever find yourself wondering what to make?
+    EesyEets helps you decide and make food for any meal! </string>
+    <string name="get_stared_button">Let\'s get started!</string>
+    <string name="ingredients_header">Ingredients</string>
+    <string name="instruciton_message">Pick a meal to get started! </string>
+    <string name="breakfast_button">Breakfast</string>
+    <string name="dinner_button">Dinner</string>
+    <string name="lunch_button">Lunch</string>
+    <string name="new_meal">New Meal</string>
+    <string name="new_meal_message">Would You Like To Suggest A New Meal? </string>
+    <string name="button_press_message">If you want to pick a new meal, click the button. </string>
+    <string name="suggestion_message">We would Love To Hear Your Feedback \n\n
+        How Was Your Experience Using The App? \n\n
+        What Can We Do Better? \n\n
+        Please Email Us At eesyeets@hotmail.org</string>
+    <string name="sw600dpMessage">We value your input! </string>
+    <string name="home_tab">Home</string>
+    <string name="enter_name">Name</string>
+    <string name="next_button">Next</string>
+    <string name="text_link">Link to your meal.</string>
+    <string name="question_suggestion_text">Would you like to suggest a dish that we can add to this meal?</string>
+    <string name="lunch_tab">Lunch</string>
+    <string name="dish">Dish</string>
+    <string name="their_pick">You picked %s as a meal.</string>
+    <string name="dinner_tab">Dinner</string>
+    <string name="favorites_text">Favorite Meals</string>
+    <string name="breakfast_tab">Breakfast</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="grocery_text">Grocery</string>
+    <string name="breakfast_header">Hmm, what will you need for breakfast?</string>
+    <string name="lunch_header">Hmm, what will you need for lunch?</string>
+    <string name="dinner_header">Hmm, what will you need for dinner?</string>
+    <string name="chicken_ingredients"> One pack of Chicken Legs, All purpose flour, 2 qts of Canola Oil </string>
+    <string name="pho_ingredients"> Noodles, broth (bone broth, chicken or beef), meat (chicken or beef) or seafood.</string>
+    <string name="sandwich_ingredients"> Two pieces of bread, lunch meat (turkey, chicken, tofu), two slices of cheese (or cheese alternative), two tomato slices. </string>
+    <string name="salad_ingredients"> One head of lettuce, one cups fresh spinach, one tomato, diced olives and mushrooms.</string>
+    <string name="oatmeal_ingredients"> Milk (1%, 2%, skim, or any milk alternative) or water, and any brand of Oatmeal.</string>
+    <string name="cereal_ingredients"> Milk (1%, 2%, skim, or any milk alternative), and any brand of cereal. In a bind you can even use granola!</string>
+    <string name="find_store">FIND STORE</string>
+    <string name="grocery_intro_text"> Don\'t have all the ingredients? No problem! Click the link to find a store near you!</string>
+    <string name="feedback_response_text"> You said you have ideas! </string>
+    <string name="chosen_meal">Here are your options.</string>
+    <string name="hello_blank_fragment">Thank you for using rrrrr Thank you! </string>
+    <string name="ingredients_list">Ever find yourself wondering what to make?
+    EesyEets helps you decide and make food for any meal! </string>
+    <string name="list_of_ingredients"> Here is your list of Ingredients:
+
+        %s</string>
+    <string name="feedback_hint"> Did you like your breakfast options? Type \'yes\' or \'no\'. </string>
+    <string name="lunch_feedback_hint"> Did you like your lunch options? Type \'yes\' or \'no\'. </string>
+    <string name="dinner_feedback_hint"> Did you like your dinner options? Type \'yes\' or \'no\'. </string>
+    <string name="pick_meal">Pick meal</string>
+    <string name="picture_meal">Take a picture of your tasty creation here! </string>
+    <string name="recent_meal"> Featured </string>
+    <string name="title_activity_browse">BrowseActivity</string>
+    <string name="browse_page">Browse Meals</string>
+    <string name="refresh_meal_button">Refresh Meals</string>
+    <string name="instruction_button"> Back To Main </string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="meal_details">Meal Details:</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+    <string name="first_time_meal_detail_instructions">Please choose a meal in the meal browsing page to see it as featured.</string>
+</resources>

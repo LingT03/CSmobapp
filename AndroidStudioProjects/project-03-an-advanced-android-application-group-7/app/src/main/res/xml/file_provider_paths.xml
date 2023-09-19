@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="photos"
+        path="Android/data/edu.msudenver.cs3013.project03/files/Pictures" />
+    <external-path
+        name="videos"
+        path="Android/data/edu.msudenver.cs3013.project03/files/Movies" />
+</paths>
